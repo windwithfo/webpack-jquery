@@ -1,0 +1,129 @@
+{
+    "code": 0,
+    "data": {
+        "isLogin": false,
+        "sendUrl": "/api/commit",
+        "fields": [
+            {
+                "custom": "",
+                "name": "name",
+                "rule": "",
+                "label": "名称",
+                "placeholder": "请输入名称",
+                "type": "text",
+                "required": true
+            },
+            {
+                "custom": "",
+                "name": "sex",
+                "rule": "",
+                "label": "性别",
+                "placeholder": "请输入性别",
+                "type": "radio",
+                "list": [
+                    {
+                        "text": "男",
+                        "value": "1",
+                        "status": "checked"
+                    },
+                    {
+                        "text": "女",
+                        "value": "2",
+                        "status": ""
+                    }
+                ],
+                "required": true
+            },
+            {
+                "custom": "",
+                "name": "school",
+                "rule": "",
+                "label": "获得称号",
+                "placeholder": "请输入获得称号",
+                "type": "text",
+                "required": true
+            },
+            {
+                "custom": "",
+                "name": "major",
+                "rule": "",
+                "label": "所属单位",
+                "placeholder": "请输入所属单位",
+                "type": "text",
+                "required": true
+            },
+            {
+                "custom": {
+                    "startView": 4,
+                    "format": "yyyy-mm",
+                    "minView": 3
+                },
+                "name": "graduateTime",
+                "rule": "",
+                "label": "入行时间",
+                "placeholder": "请输入入行时间",
+                "type": "date",
+                "required": true
+            },
+            {
+                "custom": "",
+                "name": "phone",
+                "rule": "phone",
+                "label": "电话",
+                "placeholder": "请输入电话",
+                "type": "text",
+                "required": true
+            },
+            {
+                "custom": "",
+                "name": "email",
+                "rule": "email",
+                "label": "邮箱",
+                "placeholder": "请输入邮箱",
+                "type": "text",
+                "required": true
+            },
+            {
+                "custom": "",
+                "name": "wechat",
+                "rule": "",
+                "label": "微信号",
+                "placeholder": "请输入微信号",
+                "type": "text",
+                "required": false
+            },
+            {
+                "custom": "",
+                "name": "session",
+                "rule": "",
+                "label": "选择商品",
+                "placeholder": "请输入报名场次",
+                "type": "radio",
+                "list": [
+                    {
+                        "text": "玄不改命",
+                        "value": "1",
+                        "status": "checked"
+                    },
+                    {
+                        "text": "氪不救非",
+                        "value": "2",
+                        "status": ""
+                    }
+                ],
+                "required": true
+            },
+            {
+                "help": "(请上传小于5M的.doc、.html或.pdf格式文件)",
+                "name": "attachement",
+                "rule": "",
+                "label": "简历",
+                "placeholder": "请输入简历",
+                "type": "file",
+                "required": false
+            }
+        ],
+        "title": "动态表单"
+    },
+    "msg": "成功"
+}

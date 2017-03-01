@@ -1,0 +1,128 @@
+@import '../../dev/bootstrap/css/bootstrap.css';
+@import 'font.css';
+
+@fc3: #333;
+@fc6: #666;
+@fc9: #999;
+@fcf: #fff;
+@fc0: #000;
+@bc:  #eee;
+
+/* 清除浮动 */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.arial {
+    font-family: 'Arial';
+}
+
+.fm {
+    font-family: 'Microsoft Yahei', '微软雅黑', 'Hiragino Sans GB';
+}
+
+.fc(@val) {
+    color: @val;
+}
+
+.fs(@val) {
+    font-size: unit(@val, px);
+}
+
+.lh(@val) {
+    line-height: unit(@val, px);
+}
+
+.bg(@val) {
+    background-color: @val;
+}
+
+.inline() {
+    display: inline-block;
+}
+
+.block() {
+    display: block;
+}
+
+.m(@val) {
+    margin: unit(@val, px);
+}
+
+.ml(@val) {
+    margin-left: unit(@val, px);
+}
+
+.mr(@val) {
+    margin-right: unit(@val, px);
+}
+
+.mt(@val) {
+    margin-top: unit(@val, px);
+}
+
+.mb(@val) {
+    margin-bottom: unit(@val, px);
+}
+
+.nom {
+    margin: 0;
+}
+
+.p(@val) {
+    padding: unit(@val, px);
+}
+
+.pl(@val) {
+    padding-left: unit(@val, px);
+}
+
+.pr(@val) {
+    padding-right: unit(@val, px);
+}
+
+.pt(@val) {
+    padding-top: unit(@val, px);
+}
+
+.pb(@val) {
+    padding-bottom: unit(@val, px);
+}
+
+.nop {
+    padding: 0;
+}
+
+.b {
+    border: @bc solid 1px;
+}
+
+.bt {
+    border-top: @bc solid 1px;
+}
+
+.bb {
+    border-bottom: @bc solid 1px;
+}
+
+.bl {
+    border-left: @bc solid 1px;
+}
+
+.br {
+    border-right: @bc solid 1px;
+}
+
+.nob {
+    border: none;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

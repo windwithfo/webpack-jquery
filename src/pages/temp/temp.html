@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>template</title>
+        <meta name="keywords" content="temp template 模板 例子"/>
+        <meta name="description" itemprop="description" content="bootstrap使用模板"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    </head>
+    <body>
+        <div id="page">
+            <h3>button</h3>
+            <button id="btn">test</button>
+            <h3>dialog</h3>
+            <div id="c_dialog" class="c_dialog">
+            </div>
+            <h3>popover</h3>
+            <div>
+                <button type="button" id="p1" class="btn btn-default" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    Popover on top
+                </button>
+            </div>
+        </div>
+
+        <!-- templates -->
+        <script id="tpl_dialog" type="text/html">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">{{text}}</button>
+            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="mySmallModalLabel">{{text}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            {{#content}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+    <!-- built files will be auto injected -->
+    </body>
+</html>
