@@ -4,161 +4,161 @@
 @bc: #d9d9d9;
 
 body {
-    .bg(#f6f6f6);
+  .bg(#f6f6f6);
 }
 
 #page {
-    width: 1200px;
-    margin: 30px auto 80px;
-    padding: 0 18px;
+  width: 1200px;
+  margin: 30px auto 80px;
+  padding: 0 18px;
+  .fc(@fc3);
+  .fs(14);
+  .bg(#fff);
+  .pb(40);
+
+  .title {
+    .fs(20);
     .fc(@fc3);
-    .fs(14);
-    .bg(#fff);
-    .pb(40);
+    .lh(70);
+    font-weight: 700;
+    .bb();
+  }
 
-    .title {
-        .fs(20);
-        .fc(@fc3);
-        .lh(70);
-        font-weight: 700;
-        .bb();
+  .content {
+    width: 280px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+
+  .btn-submit {
+    width: 100%;
+    height: 40px;
+    .mt(30);
+    .bg(#ff8517);
+    .fs(16);
+    .fc(@fcf);
+    outline: none;
+  }
+
+  .form-title {
+    position: absolute;
+    width: 200px;
+    left: -210px;
+    text-align: right;
+    line-height: 34px;
+  }
+
+  .nlh {
+    line-height: 22px;
+  }
+
+  .file {
+    position: relative;
+    .mt(10);
+
+    .file-ui {
+      width: 100%;
+      height: 34px;
+      .lh(34);
+      .bg(#f3f3f3);
+      text-align: center;
+      padding: 0 20px;
+      .ellipsis();
+      cursor: pointer;
     }
 
-    .content {
-        width: 280px;
-        margin: 0 auto;
-        padding: 40px 0;
+    input {
+      display: none;
+      height: 34px;
+      cursor: pointer;
+    }
+  }
+
+  .result {
+    display: none;
+    margin: 0 auto;
+    .mt(160);
+    text-align: center;
+
+    .img {
+      .mr(10);
+      vertical-align: top;
     }
 
-    .btn-submit {
-        width: 100%;
-        height: 40px;
-        .mt(30);
-        .bg(#ff8517);
+    .msg {
+      display: inline-block;
+      text-align: left;
+      .fs(22);
+      .fc(#ff8517);
+
+      p {
         .fs(16);
-        .fc(@fcf);
-        outline: none;
+        .fc(@fc3);
+        .mb(0);
+      }
+
+      span {
+        .fs(16);
+        .fc(@fc9);
+      }
     }
+  }
 
-    .form-title {
-        position: absolute;
-        width: 200px;
-        left: -210px;
-        text-align: right;
-        line-height: 34px;
-    }
+  label {
+    color: @fc6;
+    font-weight: normal;
+  }
 
-    .nlh {
-        line-height: 22px;
-    }
-
-    .file {
-        position: relative;
-        .mt(10);
-
-        .file-ui {
-            width: 100%;
-            height: 34px;
-            .lh(34);
-            .bg(#f3f3f3);
-            text-align: center;
-            padding: 0 20px;
-            .ellipsis();
-            cursor: pointer;
-        }
-
-        input {
-            display: none;
-            height: 34px;
-            cursor: pointer;
-        }
-    }
-
-    .result {
-        display: none;
-        margin: 0 auto;
-        .mt(160);
-        text-align: center;
-
-        .img {
-            .mr(10);
-            vertical-align: top;
-        }
-
-        .msg {
-            display: inline-block;
-            text-align: left;
-            .fs(22);
-            .fc(#ff8517);
-
-            p {
-                .fs(16);
-                .fc(@fc3);
-                .mb(0);
-            }
-
-            span {
-                .fs(16);
-                .fc(@fc9);
-            }
-        }
-    }
-
-    label {
-        color: @fc6;
-        font-weight: normal;
-    }
-
-    em {
-        .fc(#c25);
-    }
+  em {
+    .fc(#c25);
+  }
 }
 
 .modal-body {
-    text-align: center;
+  text-align: center;
 
-    .close-btn {
-        width: 120px;
-        height: 40px;
-        .mt(30);
-        .bg(#ff8517);
-        .fs(16);
-        .fc(@fcf);
-        outline: none;
-    }
+  .close-btn {
+    width: 120px;
+    height: 40px;
+    .mt(30);
+    .bg(#ff8517);
+    .fs(16);
+    .fc(@fcf);
+    outline: none;
+  }
 
-    p {
-        margin: 10px;
-    }
+  p {
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 420px) {
-    #page {
-        width: 100%;
+  #page {
+    width: 100%;
 
-        .form-title {
-            position: relative;
-            width: 200px;
-            left: 0;
-            text-align: left;
-            line-height: 34px;
-        }
-
-        .nlh {
-            line-height: 22px;
-        }
-
-        .result {
-            .mt(40);
-
-            .img {
-                .mr(0);
-                .mb(30);
-            }
-
-            .msg {
-                text-align: center;
-            }
-        }
+    .form-title {
+      position: relative;
+      width: 200px;
+      left: 0;
+      text-align: left;
+      line-height: 34px;
     }
+
+    .nlh {
+      line-height: 22px;
+    }
+
+    .result {
+      .mt(40);
+
+      .img {
+        .mr(0);
+        .mb(30);
+      }
+
+      .msg {
+        text-align: center;
+      }
+    }
+  }
 }

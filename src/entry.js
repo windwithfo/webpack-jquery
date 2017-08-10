@@ -4,19 +4,19 @@
  */
 
 let pages = {
-    // index
-    temp: './src/pages/temp/temp.js',
-    // 动态表单页
-    form: './src/pages/form/form.js'
+  // index
+  temp: './src/pages/temp/temp.js',
+  // 动态表单页
+  form: './src/pages/form/form.js'
 };
 
 let vendors = {
-    jquery: 'jquery',
-    bootstrap: 'bootstrap',
-    template: 'template'
+  jquery: 'jquery',
+  bootstrap: 'bootstrap',
+  template: 'template'
 };
 
 export default {
-    pages,
-    vendors
+  pages,
+  vendors
 };

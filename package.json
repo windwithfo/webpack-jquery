@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "babel-node node_modules/webpack-dev-server/bin/webpack-dev-server --devtool eval --progress --hot --inline --colors --content-base --host 0.0.0.0",
     "build": "babel-node webpack.build",
-    "watch": "babel-node node_modules/webpack/bin/webpack --progress --colors --watch"
+    "watch": "babel-node node_modules/webpack/bin/webpack --progress --colors --watch",
+    "lint": "eslint --ignore-pattern .eslintignore --ext .js,.vue src"
   },
   "author": "Emiya",
   "license": "ISC",

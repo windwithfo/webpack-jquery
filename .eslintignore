@@ -1,2 +1,2 @@
-webpack*.js
+src/assets/css/**/*.js
 src/dev/*

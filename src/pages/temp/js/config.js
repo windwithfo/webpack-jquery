@@ -4,9 +4,9 @@
  */
 
 export default {
-    seo: {
-        title: 'MCC',
-        keywords: 'MCC',
-        description: 'MCC'
-    }
+  seo: {
+    title: 'MCC',
+    keywords: 'MCC',
+    description: 'MCC'
+  }
 };

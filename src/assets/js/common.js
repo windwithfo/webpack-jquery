@@ -5,12 +5,12 @@
  */
 
 System.import('jquery').then(() => {
-    require('bootstrap');
+  require('bootstrap');
 }, (e) => {
-    if (window.console) {
-        console.log(e);
-        console.log('error on bootstrap load');
-    }
+  if (window.console) {
+    console.log(e);
+    console.log('error on bootstrap load');
+  }
 });
 
 /**
@@ -19,10 +19,10 @@ System.import('jquery').then(() => {
  * @return {String} 处理后的字符串
  */
 function trim(str) {
-    let ret;
-    let reg = /^\s+|\s+$/g;
-    ret = str.replace(reg, '');
-    return ret;
+  let ret;
+  let reg = /^\s+|\s+$/g;
+  ret = str.replace(reg, '');
+  return ret;
 }
 
 /**
@@ -32,11 +32,11 @@ function trim(str) {
  * @return {String} 对应的value
  */
 function queryString(name, url = window.location.href) {
-    let svalue = url.match(new RegExp('[?&]' + name + '=([^&]*)(&?)', 'i'));
-    return svalue ? svalue[1] : svalue;
+  let svalue = url.match(new RegExp('[?&]' + name + '=([^&]*)(&?)', 'i'));
+  return svalue ? svalue[1] : svalue;
 }
 
 export default {
-    trim,
-    queryString
+  trim,
+  queryString
 };

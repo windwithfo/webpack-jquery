@@ -17,21 +17,21 @@ console.log(config);
 
 // FetchData or SendData
 $.get('/api/sign_in', function (ret) {
-    console.log(ret);
+  console.log(ret);
 });
 
 // event regedit
 $('#btn').on('click', function () {
-    console.log('click');
+  console.log('click');
 });
 
 $(function () {
-    $("[data-toggle='popover']").popover();
+  $("[data-toggle='popover']").popover();
 });
 
 const data = {
-    text: 'dialog',
-    content: '测试数据<p>1232</p>'
+  text: 'dialog',
+  content: '测试数据<p>1232</p>'
 };
 const html = template('tpl_dialog', data);
 $('#c_dialog').html(html);
