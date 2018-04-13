@@ -1,11 +1,11 @@
-webpack2-jquery3
+webpack-jquery
 ===
-a project with webpack2,jquery3 and bootstrap3
+a project with webpack4,jquery3 and bootstrap3
 ***
 
 Install with:
 
-    npm install webpack2-jquery3
+    npm install webpack-jquery
 
 ##Usage Example
 
