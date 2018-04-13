@@ -137,14 +137,14 @@ module.exports = {
     'no-var': 1,
     'no-const-assign': 1,
     'object-property-newline': 1,
-    'object-curly-newline': [1, {
+    'object-curly-newline': [0, {
       minProperties: 1
     }],
-    'object-curly-spacing': [1, 'never'],
+    'object-curly-spacing': [1, 'always'],
     'no-new-object': 1,
     // !!的使用
     "no-extra-boolean-cast": 0,
     // 字符串拼接风格
-    "operator-linebreak": [2, "before"]
+    "operator-linebreak": [2, 'before']
   }
-};
+}

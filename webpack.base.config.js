@@ -7,25 +7,14 @@ import path    from 'path';
 import webpack from 'webpack';
 import entry   from './src/entry';
 import Html    from 'html-webpack-plugin';
-import Extract from 'extract-text-webpack-plugin';
+import Extract from 'mini-css-extract-plugin';
 
 const projectRoot = path.resolve(__dirname, './');
 
 let plugins = [];
 let entries = Object.assign({}, entry.pages, entry.vendors);
-let extractLESS = new Extract({
-  filename: '[name].[contenthash].css',
-  disable: false,
-  allChunks: true
-});
 
 getHtml();
-
-plugins.push(new webpack.optimize.CommonsChunkPlugin({
-  names: ['bootstrap', 'jquery', 'template', 'manifest']
-}));
-
-plugins.push(extractLESS);
 
 plugins.push(new webpack.ProvidePlugin({
   '$': 'jquery',
@@ -46,6 +35,37 @@ plugins.push(new webpack.LoaderOptionsPlugin({
 export default {
   // 页面入口文件配置
   entry: entries,
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        default: {
+          minChunks: 1,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+        vendor1: {
+          name: 'vue',
+          test: /node_modules\/vue/,
+          priority: 10,
+          enforce: true
+        },
+        vendor2: {
+          name: 'mint',
+          test: /node_modules\/mint-ui/,
+          priority: 10,
+          enforce: true
+        },
+        style: {
+          name: 'style',
+          test: /\.css/,
+          chunks: 'all',
+          minChunks: 1,
+          enforce: true
+        }
+      }
+    }
+  },
   // 入口文件输出配置
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -70,31 +90,31 @@ export default {
     },
     extensions: ['.js', '.json', '.less', '.css']
   },
+  resolveLoader: {
+    moduleExtensions: ['-loader']
+  },
   module: {
     rules: [
       {
         test: /\.less$/,
-        loader: extractLESS.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader!postcss-loader!less-loader'
-        }),
+        use: [Extract.loader, 'css', 'postcss', 'less'],
         include: projectRoot + '/src/',
         exclude: /node_modules/
       },
       {
         test: /\.html$/,
-        use: [{
-          loader: 'html-withimg-loader'
-        }]
+        use: {
+          loader: 'html-withimg'
+        }
       },
       {
         test: /\.js$/,
-        use: [{
-          loader: 'babel-loader',
+        use: {
+          loader: 'babel',
           options: {
             presets: ['es2015']
           }
-        }],
+        },
         include: projectRoot,
         exclude: /node_modules/
       },

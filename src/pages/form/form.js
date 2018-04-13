@@ -111,8 +111,8 @@ $('#form').on('submit', function () {
     }
     else {
       $('#page')
-      .append('<iframe id="form-iframe" width="0" height="0" border="0" '
-      + 'name="form-iframe" style="width:0;height:0;border:0;display:none;"></iframe>');
+        .append('<iframe id="form-iframe" width="0" height="0" border="0" '
+        + 'name="form-iframe" style="width:0;height:0;border:0;display:none;"></iframe>');
       $(this).prop('action', form.sendUrl);
       $(this).prop('method', 'post');
       $(this).prop('target', 'form-iframe');

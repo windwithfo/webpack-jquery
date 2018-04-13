@@ -4,7 +4,7 @@
  * @author dongkusnhan
  */
 
-System.import('jquery').then(() => {
+import('jquery').then(() => {
   require('bootstrap');
 }, (e) => {
   if (window.console) {
